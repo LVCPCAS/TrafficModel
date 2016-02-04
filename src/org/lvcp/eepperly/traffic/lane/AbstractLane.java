@@ -21,6 +21,16 @@ public abstract class AbstractLane {
 
 	protected AbstractLane comesFrom, goesTo, leftLane, rightLane;
 
+	public AbstractLane(Traffic traffic, double length, double speedLimit, AbstractLane comesFrom, AbstractLane goesTo, AbstractLane leftLane, AbstractLane rightLane){
+		this.traffic = traffic;
+		this.length = length;
+		this.speedLimit = speedLimit;
+		this.comesFrom = comesFrom;
+		this.goesTo = goesTo;
+		this.leftLane = leftLane;
+		this.rightLane = rightLane;
+	}
+
 	public void removeVehicle(Vehicle vehicle){
 		vehicles.remove(vehicle);
 		drivers.remove(vehicle.getDriver());
