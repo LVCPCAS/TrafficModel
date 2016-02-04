@@ -1,5 +1,6 @@
 package org.lvcp.eepperly.traffic.driver;
 
+import org.lvcp.eepperly.traffic.lane.AbstractLane;
 import org.lvcp.eepperly.traffic.simulation.Traffic;
 import org.lvcp.eepperly.traffic.vehicle.Vehicle;
 
@@ -9,6 +10,10 @@ import org.lvcp.eepperly.traffic.vehicle.Vehicle;
 public class IDMDriver extends Driver {
 	private double desiredSpacing;
 	private double timeSpacing;
+
+	public IDMDriver(Traffic traffic, Vehicle vehicle, AbstractLane lane){
+		super(traffic, vehicle, lane);
+	}
 
 	public void advanceVehicle(Vehicle inFront){ //implemented first with euler's method
 		double acceleration;
