@@ -42,6 +42,26 @@ public abstract class AbstractLane {
 		return speedLimit;
 	}
 
+	public void setTraffic(Traffic traffic){
+		this.traffic = traffic;
+	}
+
+	public void setComesFrom(AbstractLane comesFrom) {
+		this.comesFrom = comesFrom;
+	}
+
+	public void setGoesTo(AbstractLane goesTo) {
+		this.goesTo = goesTo;
+	}
+
+	public void setLeftLane(AbstractLane leftLane) {
+		this.leftLane = leftLane;
+	}
+
+	public void setRightLane(AbstractLane rightLane) {
+		this.rightLane = rightLane;
+	}
+
 	public double getLength() {
 		return length;
 	}
