@@ -17,4 +17,7 @@ public abstract class Driver {
 		this.vehicle = vehicle;
 		this.lane = lane;
 	}
+	public void setVehicle(Vehicle vehicle){
+		this.vehicle = vehicle;
+	}
 }
