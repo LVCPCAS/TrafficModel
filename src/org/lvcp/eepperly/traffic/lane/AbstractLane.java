@@ -4,6 +4,7 @@ import org.lvcp.eepperly.traffic.driver.Driver;
 import org.lvcp.eepperly.traffic.simulation.Traffic;
 import org.lvcp.eepperly.traffic.vehicle.Vehicle;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,6 +30,8 @@ public abstract class AbstractLane {
 		this.goesTo = goesTo;
 		this.leftLane = leftLane;
 		this.rightLane = rightLane;
+		vehicles = new ArrayList<>();
+		drivers = new ArrayList<>();
 	}
 
 	public void removeVehicle(Vehicle vehicle){
