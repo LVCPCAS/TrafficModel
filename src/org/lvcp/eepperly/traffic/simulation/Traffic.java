@@ -12,6 +12,10 @@ public class Traffic {
 	private List<AbstractLane> lanes;
 	private double dt;
 	public static final double drivingExponent = 4;
+	public Traffic(double dt, List<AbstractLane> lanes){
+		this.dt = dt;
+		this.lanes = lanes;
+	}
 	public void advance(){
 		Iterator<AbstractLane> itr = lanes.iterator();
 		while (itr.hasNext()){
@@ -23,7 +27,4 @@ public class Traffic {
 		return dt;
 	}
 
-	public double getDrivingExponent() {
-		return drivingExponent;
-	}
 }
