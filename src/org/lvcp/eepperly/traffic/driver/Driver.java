@@ -12,4 +12,9 @@ public abstract class Driver {
 	protected Vehicle vehicle;
 	protected AbstractLane lane;
 	public abstract void advanceVehicle(Vehicle inFront);
+	public Driver(Traffic traffic, Vehicle vehicle, AbstractLane lane){
+		this.traffic = traffic;
+		this.vehicle = vehicle;
+		this.lane = lane;
+	}
 }
