@@ -27,4 +27,14 @@ public class Traffic {
 		return dt;
 	}
 
+	@Override
+	public String toString(){
+		Iterator<AbstractLane> itr = lanes.iterator();
+		String returnStr = "Traffic\n";
+		while (itr.hasNext()){
+			returnStr += itr.next()+"\n";
+		}
+		return returnStr;
+	}
+
 }

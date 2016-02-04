@@ -65,4 +65,14 @@ public abstract class AbstractLane {
 	public double getLength() {
 		return length;
 	}
+
+	@Override
+	public String toString(){
+		String returnStr = "Lane\n";
+		Iterator<Vehicle> itr = vehicles.iterator();
+		while (itr.hasNext()){
+			returnStr += itr.next()+"\n";
+		}
+		return returnStr;
+	}
 }

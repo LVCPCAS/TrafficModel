@@ -59,4 +59,9 @@ public abstract class Vehicle {
 	public double getMaxDecel() {
 		return maxDecel;
 	}
+
+	@Override
+	public String toString(){
+		return "("+getPosition()+", "+getVelocity()+")";
+	}
 }
