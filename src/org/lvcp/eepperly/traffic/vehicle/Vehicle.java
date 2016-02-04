@@ -22,6 +22,17 @@ public abstract class Vehicle {
 
 	protected AbstractLane lane;
 
+	public Vehicle(Traffic traffic, AbstractLane lane, Driver driver, double position, double velocity, double maxAccel, double maxDecel, double length){
+		this.traffic = traffic;
+		this.driver = driver;
+		this.lane = lane;
+		this.position = position;
+		this.velocity = velocity;
+		this.maxAccel = maxAccel;
+		this.maxDecel = maxDecel;
+		this.length = length;
+	}
+
 	public void setPosition(double position) {
 		this.position = position;
 	}
